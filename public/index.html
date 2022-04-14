@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Welcome to Firebase Hosting</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/9.4.1/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/9.4.1/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/9.4.1/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/9.4.1/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/9.4.1/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/9.4.1/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/9.4.1/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/9.4.1/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/9.4.1/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/9.4.1/firebase-performance-compat.js"></script>
+    <!--
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+    <style media="screen">
+      body { background: white; max-width: 1200px; color: rgba(0,0,0,0.87); align-items: center; text-align: justify;
+        font-family: Roboto, Helvetica, Arial, sans-serif; margin: auto; padding: 200px; }
+      @media (max-width: 800px) {
+        body { padding: 50px; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="message">
+      <h1>Dante Tam</h1>
+      <p>I love to play games! I am developing
+        <a href="https://github.com/dantetam/world#readme" target="_blank">world simulations of civilization</a> inspired by Dwarf Fortress, Rimworld, and Minecraft.</p>
+
+      <p>In the past I've developed <a href="https://github.com/dantetam/civgame#readme" target="_blank">a turn-based strategy</a>
+        loosely based on Civilization IV/V for desktop,
+        a new version for Android as well,
+        and <a href="https://github.com/dantetam/roguelike#readme" target="_blank">a roguelike dungeon crawler</a>.
+        My casual research delves into OpenGL rendering in Java (LWJGL) with shaders,
+        and graphics rendering through interleaved vertex buffer objects. I also have a few cute web simulations including a galactic
+        strategy game.</p>
+
+      <p>Computer science and creative writing both follow chains of logic. That's why I've written my fantasy sci-fi adventure
+        about the world we live in, inspired by Dante and Milton.
+        <a href="http://thebp.site/317469" target="_blank">Endless Paradise</a></p>
+        <a href="./static/PrologueExcerpt.pdf" target="_blank">Free Prologue</a></p>
+
+      <p>In the <a href="https://www.linkedin.com/in/daptam/" target="_blank">professional world</a>, I interned at Roblox in its 2013, eight years before IPO.
+        At PayPal I built merchant website products and financial dashboards. I developed
+        <a href="https://github.com/amplitude/Amplitude-Android/commits?author=dantetam" target="_blank">open-source SDKs</a> for
+        <a href="https://amplitude.com/">Amplitude</a>, to allow
+        users to improve their product experiences on mobile apps and websites across multiple platforms, including Unity, Java (JVM), and Android.</p>
+
+      <p>Personally I love my electric bike. I'm obsessed with ramen, pho, and hot pot.
+        Beyond video games, I study poker, chess, and bridge.
+        I have a casual portfolio of technical architecture designs and more fantasy architecture scenes. If you've gotten this far
+        please reach out over <a href="https://www.linkedin.com/in/daptam/" target="_blank">LinkedIn</a> or at </p>
+
+      <p>dante(dot)tam1(at)gmail(dot)com</p>
+
+      <p>
+        <a href="" target="_blank">Crypto, the Speculative Scam</a>
+      </p>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const loadEl = document.querySelector('#load');
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.firestore().doc('/foo/bar').get().then(() => { });
+        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        // firebase.analytics(); // call to activate
+        // firebase.analytics().logEvent('tutorial_completed');
+        // firebase.performance(); // call to activate
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        try {
+          let app = firebase.app();
+          let features = [
+            'auth',
+            'database',
+            'firestore',
+            'functions',
+            'messaging',
+            'storage',
+            'analytics',
+            'remoteConfig',
+            'performance',
+          ].filter(feature => typeof app[feature] === 'function');
+          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+  </body>
+</html>
